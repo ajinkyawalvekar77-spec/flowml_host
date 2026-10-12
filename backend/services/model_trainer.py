@@ -24,7 +24,7 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.svm import SVR
 
-SAVE_DIR = "models/saved_models"
+SAVE_DIR = "/tmp/flowml_models/saved_models"
 
 
 def train_models(X: pd.DataFrame, y: pd.Series, task_type: str, test_size: float = 0.2) -> dict:
