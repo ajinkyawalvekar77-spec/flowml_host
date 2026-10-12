@@ -86,7 +86,7 @@ async def train(
         raise_http_exception(500, "Error training models", str(exc))
 
     # Artifacts are written to legacy save dir by train_models; re-save into store
-    legacy_save_dir = "models/saved_models"
+    legacy_save_dir = "/tmp/flowml_models/saved_models"
     artifact_files = [
         "best_model.joblib", "features.joblib", "task_type.joblib",
         "target_encoder.joblib", "feature_encoders.joblib",
