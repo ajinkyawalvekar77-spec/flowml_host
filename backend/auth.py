@@ -55,8 +55,9 @@ def set_user_active_status(uid: str, is_active: bool):
 
 
 
+
 def _firebase_app():
-    """Lazy-init Firebase Admin SDK using Vercel environment credentials."""
+    """Initialize Firebase Admin using Vercel environment credentials."""
     try:
         import firebase_admin
         from firebase_admin import credentials
@@ -85,6 +86,7 @@ def _firebase_app():
             "firebase-admin is not installed. "
             "Install it or set DEV_AUTH=1 for local development."
         )
+
 
 
 
